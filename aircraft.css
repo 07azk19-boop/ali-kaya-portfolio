@@ -1,0 +1,1942 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #090e13;
+    color: #e8edf2;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --bg: #090e13;
+    --bg-soft: #0d141b;
+    --bg-card: #101820;
+
+    --border: #202c36;
+    --border-light: #2c3a46;
+
+    --text: #e8edf2;
+    --text-soft: #9aa8b4;
+    --text-muted: #647482;
+
+    --white: #f1f4f6;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.aircraft-container {
+    width: min(90%, 1240px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.aircraft-header {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    height: 78px;
+
+    background: rgba(9, 14, 19, 0.88);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+.header-inner {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.aircraft-logo {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-light);
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.aircraft-logo:hover {
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--bg);
+}
+
+
+/* HEADER TITLE */
+
+.aircraft-header-title {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+}
+
+
+/* BACK */
+
+.aircraft-back {
+    color: var(--text-soft);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    transition: color 0.25s ease;
+}
+
+
+.aircraft-back:hover {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.aircraft-hero {
+    padding: 110px 0 95px;
+
+    border-bottom: 1px solid var(--border);
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(65, 85, 100, 0.13),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #0a1016 0%,
+            #090e13 100%
+        );
+}
+
+
+.hero-content {
+    max-width: 760px;
+}
+
+
+.aircraft-kicker {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #71818e;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.aircraft-hero h1 {
+    font-size: clamp(56px, 8vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+.aircraft-hero h1 span {
+    display: block;
+
+    color: #687986;
+}
+
+
+.aircraft-hero p {
+    max-width: 570px;
+
+    color: var(--text-soft);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   EXPLORER
+========================================================= */
+
+.aircraft-explorer {
+    padding: 80px 0 120px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.aircraft-search {
+    position: relative;
+
+    margin-bottom: -5px;
+}
+
+
+.aircraft-search input {
+    width: 100%;
+    height: 64px;
+
+    padding:
+        0 24px 0 58px;
+
+    background: var(--bg-soft);
+
+    border: 1px solid var(--border);
+
+    border-radius: 4px;
+
+    outline: none;
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.aircraft-search input::placeholder {
+    color: var(--text-muted);
+}
+
+
+.aircraft-search input:focus {
+    background: #101820;
+
+    border-color: #465866;
+}
+
+
+.search-icon {
+    position: absolute;
+
+    left: 22px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-muted);
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filter-section {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.filter-title {
+    min-width: 90px;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.aircraft-filters {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.aircraft-filter,
+.aircraft-type-filter {
+    padding: 9px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 3px;
+
+    background: transparent;
+
+    color: var(--text-muted);
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.aircraft-filter:hover,
+.aircraft-type-filter:hover {
+    color: var(--text);
+
+    border-color: var(--border-light);
+}
+
+
+.aircraft-filter.active,
+.aircraft-type-filter.active {
+    background: var(--white);
+
+    border-color: var(--white);
+
+    color: var(--bg);
+}
+
+
+/* =========================================================
+   RESULT HEADER
+========================================================= */
+
+.aircraft-result-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-top: 75px;
+
+    margin-bottom: 30px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.result-kicker {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.aircraft-result-header h2 {
+    color: var(--text);
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    letter-spacing: -0.5px;
+}
+
+
+.aircraft-count {
+    color: var(--text-muted);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   AIRCRAFT GRID
+========================================================= */
+
+.aircraft-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   AIRCRAFT CARD
+========================================================= */
+
+.aircraft-card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 390px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.aircraft-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #42525f;
+}
+
+
+/* IMAGE */
+
+.aircraft-card-image {
+    position: relative;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #0b1117;
+}
+
+
+.aircraft-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.aircraft-card:hover
+.aircraft-card-image img {
+    transform: scale(1.04);
+}
+
+
+/* IMAGE GRADIENT */
+
+.aircraft-card-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 50%,
+            rgba(5, 9, 13, 0.75) 100%
+        );
+}
+
+
+/* CARD INFO */
+
+.aircraft-card-info {
+    padding: 23px 24px 25px;
+}
+
+
+.aircraft-card-manufacturer {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.aircraft-card-title {
+    margin-bottom: 20px;
+
+    color: var(--text);
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* SPECS */
+
+.aircraft-card-specs {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.aircraft-spec {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.aircraft-spec-label {
+    color: var(--text-muted);
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.aircraft-spec-value {
+    color: var(--text-soft);
+
+    font-size: 12px;
+}
+
+
+/* CARD ARROW */
+
+.aircraft-card-arrow {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    color: var(--text-muted);
+
+    font-size: 18px;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.aircraft-card:hover
+.aircraft-card-arrow {
+    transform: translateX(5px);
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.aircraft-empty {
+    display: none;
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    border: 1px solid var(--border);
+
+    background: var(--bg-soft);
+}
+
+
+.aircraft-empty span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+.aircraft-empty p {
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.aircraft-footer {
+    border-top: 1px solid var(--border);
+
+    background: #080c10;
+}
+
+
+.footer-inner {
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.footer-inner span {
+    color: #52616d;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .aircraft-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .aircraft-container {
+        width: 88%;
+    }
+
+
+    .aircraft-header {
+        height: 68px;
+    }
+
+
+    .aircraft-header-title {
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .aircraft-back {
+        font-size: 8px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .aircraft-logo {
+        width: 34px;
+        height: 34px;
+
+        font-size: 10px;
+    }
+
+
+    .aircraft-hero {
+        padding: 75px 0 70px;
+    }
+
+
+    .aircraft-hero h1 {
+        font-size: clamp(48px, 15vw, 72px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .aircraft-hero p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .aircraft-explorer {
+        padding: 55px 0 80px;
+    }
+
+
+    .aircraft-search input {
+        height: 56px;
+
+        font-size: 14px;
+    }
+
+
+    .filter-section {
+        display: block;
+
+        padding: 17px 0;
+    }
+
+
+    .filter-title {
+        display: block;
+
+        margin-bottom: 12px;
+    }
+
+
+    .aircraft-filters {
+        gap: 6px;
+    }
+
+
+    .aircraft-filter,
+    .aircraft-type-filter {
+        padding: 8px 12px;
+
+        font-size: 8px;
+    }
+
+
+    .aircraft-result-header {
+        margin-top: 55px;
+    }
+
+
+    .aircraft-result-header h2 {
+        font-size: 23px;
+    }
+
+
+    .aircraft-count {
+        font-size: 8px;
+    }
+
+
+    .aircraft-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .aircraft-card {
+        min-height: 0;
+    }
+
+
+    .aircraft-card-image {
+        height: 210px;
+    }
+
+
+    .aircraft-card-title {
+        font-size: 23px;
+    }
+
+
+    .footer-inner {
+        min-height: 80px;
+    }
+
+
+    .footer-inner span {
+        font-size: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .aircraft-header-title {
+        display: none;
+    }
+
+
+    .aircraft-hero h1 {
+        font-size: 48px;
+    }
+
+
+    .aircraft-card-image {
+        height: 190px;
+    }
+
+}
+/* =========================================================
+   AIRCRAFT DETAIL MODAL
+========================================================= */
+
+.aircraft-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+.aircraft-modal.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+/* =========================================================
+   DETAIL MODAL — TECH INTERFACE
+========================================================= */
+
+.aircraft-detail {
+    position: relative;
+}
+
+
+/* İnce teknik grid */
+
+.aircraft-detail::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.22;
+
+    background-image:
+        linear-gradient(
+            rgba(130, 150, 165, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(130, 150, 165, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        35px 35px;
+}
+
+
+/* İçeriği grid'in üzerinde tut */
+
+.aircraft-detail > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   TECH HEADER LINE
+========================================================= */
+
+.aircraft-detail-header {
+    position: relative;
+}
+
+
+.aircraft-detail-header::after {
+
+    
+
+    position: absolute;
+
+    bottom: 12px;
+    right: 0;
+
+    color: #43535f;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   IMAGE TECH FRAME
+========================================================= */
+
+.aircraft-detail-image {
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(255, 255, 255, 0.02);
+
+}
+
+
+/* Köşe işaretleri */
+
+.aircraft-detail-image span {
+    position: absolute;
+}
+
+
+/* =========================================================
+   TITLE ACCENT
+========================================================= */
+
+.aircraft-detail-title {
+
+    position: relative;
+
+    width: fit-content;
+}
+
+
+.aircraft-detail-title::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+
+    bottom: -12px;
+
+    width: 38px;
+    height: 1px;
+
+    background: #637583;
+}
+
+
+/* =========================================================
+   DATA SECTION
+========================================================= */
+
+.aircraft-data-section {
+
+    position: relative;
+
+    transition:
+        background 0.3s ease;
+}
+
+
+.aircraft-data-section:hover {
+
+    background: #101a22;
+}
+
+
+/* Teknik numara */
+
+.aircraft-data-section::after {
+
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    color: #263640;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+.aircraft-data-section:nth-child(1)::after {
+    content: "01";
+}
+
+.aircraft-data-section:nth-child(2)::after {
+    content: "02";
+}
+
+.aircraft-data-section:nth-child(3)::after {
+    content: "03";
+}
+
+.aircraft-data-section:nth-child(4)::after {
+    content: "04";
+}
+
+
+/* =========================================================
+   DATA LABEL
+========================================================= */
+
+.aircraft-data-label {
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.aircraft-data-row:hover
+.aircraft-data-label {
+
+    color: #8393a0;
+}
+
+
+/* =========================================================
+   DATA VALUE
+========================================================= */
+
+.aircraft-data-value {
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.aircraft-data-row:hover
+.aircraft-data-value {
+
+    color: #ffffff;
+
+    transform:
+        translateX(-3px);
+}
+
+
+/* =========================================================
+   MODAL CLOSE BUTTON
+========================================================= */
+
+.aircraft-modal-close {
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    line-height: 1;
+}
+
+
+.aircraft-modal-close:hover {
+
+    transform: rotate(90deg);
+
+    transition:
+        transform 0.3s ease;
+}
+
+/* =========================================================
+   BACKDROP
+========================================================= */
+
+.aircraft-modal-backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(3, 7, 11, 0.78);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.aircraft-modal-inner {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111a22 0%,
+            #0b1117 100%
+        );
+
+    border: 1px solid #2a3945;
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.65);
+
+    transform:
+        translateY(25px)
+        scale(0.97);
+
+    transition:
+        transform 0.4s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+.aircraft-modal.active
+.aircraft-modal-inner {
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.aircraft-modal-close {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    z-index: 10;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #30404c;
+
+    background:
+        rgba(9, 14, 19, 0.75);
+
+    color: #9aa8b4;
+
+    font-size: 24px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.aircraft-modal-close:hover {
+
+    color: #ffffff;
+
+    background: #17212a;
+
+    border-color: #526473;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.aircraft-detail {
+
+    padding: 55px;
+}
+
+
+.aircraft-detail-header {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: end;
+
+    padding-bottom: 45px;
+
+    border-bottom: 1px solid #26343f;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.aircraft-detail-image {
+
+    position: relative;
+
+    height: 310px;
+
+    overflow: hidden;
+
+    background: #080d12;
+
+    border: 1px solid #26343f;
+}
+
+
+.aircraft-detail-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* IMAGE OVERLAY */
+
+.aircraft-detail-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(4, 8, 12, 0.7)
+        );
+
+    pointer-events: none;
+}
+
+
+/* TECH CORNER */
+
+.aircraft-detail-image::before {
+
+    
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 10px;
+
+    background:
+        rgba(7, 12, 17, 0.75);
+
+    border: 1px solid
+        rgba(130, 150, 165, 0.25);
+
+    color: #8393a0;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.aircraft-detail-kicker {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #687986;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.aircraft-detail-title {
+
+    margin-bottom: 8px;
+
+    color: #edf1f4;
+
+    font-size: clamp(
+        42px,
+        6vw,
+        72px
+    );
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    font-weight: 600;
+}
+
+
+.aircraft-detail-subtitle {
+
+    color: #748491;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   DATA SECTIONS
+========================================================= */
+
+.aircraft-detail-sections {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1px;
+
+    margin-top: 45px;
+
+    background: #26343f;
+
+    border: 1px solid #26343f;
+}
+
+
+.aircraft-data-section {
+
+    padding: 28px;
+
+    background: #0d151c;
+}
+
+
+.aircraft-data-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    color: #8b9aa6;
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+}
+
+
+.aircraft-data-heading::before {
+
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    background: #8293a0;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   DATA ROW
+========================================================= */
+
+.aircraft-data-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #202c35;
+}
+
+
+.aircraft-data-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.aircraft-data-label {
+
+    color: #5e6e7a;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+.aircraft-data-value {
+
+    color: #d5dde3;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.aircraft-detail-description {
+
+    margin-top: 1px;
+
+    padding: 30px;
+
+    background: #0b1218;
+
+    border: 1px solid #26343f;
+
+}
+
+
+.aircraft-detail-description-title {
+
+    margin-bottom: 15px;
+
+    color: #8393a0;
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+}
+
+
+.aircraft-detail-description p {
+
+    max-width: 850px;
+
+    color: #71808c;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   MODAL SCROLLBAR
+========================================================= */
+
+.aircraft-modal-inner::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+
+.aircraft-modal-inner::-webkit-scrollbar-track {
+
+    background: #080d12;
+
+}
+
+
+.aircraft-modal-inner::-webkit-scrollbar-thumb {
+
+    background: #2c3b47;
+
+}
+
+
+.aircraft-modal-inner::-webkit-scrollbar-thumb:hover {
+
+    background: #40515f;
+
+}
+
+
+/* =========================================================
+   MOBILE MODAL
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .aircraft-modal {
+
+        padding: 0;
+
+    }
+
+
+    .aircraft-modal-inner {
+
+        width: 100%;
+
+        height: 100%;
+
+        max-height: none;
+
+        border: none;
+
+    }
+
+
+    .aircraft-detail {
+
+        padding: 75px 22px 40px;
+
+    }
+
+
+    .aircraft-detail-header {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding-bottom: 30px;
+
+    }
+
+
+    .aircraft-detail-image {
+
+        height: 220px;
+
+        order: 2;
+
+    }
+
+
+    .aircraft-detail-header > div:last-child {
+
+        order: 1;
+
+    }
+
+
+    .aircraft-detail-title {
+
+        font-size: 52px;
+
+    }
+
+
+    .aircraft-detail-sections {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .aircraft-data-section {
+
+        padding: 23px 20px;
+
+    }
+
+
+    .aircraft-detail-description {
+
+        padding: 23px 20px;
+
+    }
+
+
+    .aircraft-modal-close {
+
+        top: 16px;
+
+        right: 16px;
+
+    }
+
+}
+/* =========================================================
+   AIRCRAFT CARDS — PREMIUM INTERACTION
+========================================================= */
+
+.aircraft-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Kartın üzerine çok hafif teknik ışık */
+
+.aircraft-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 20%,
+            rgba(180, 205, 220, 0.08) 45%,
+            transparent 70%
+        );
+
+    transform: translateX(-100%);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.7s ease;
+}
+
+
+/* Üst köşedeki teknik işaret */
+
+.aircraft-card::after {
+    content: "VIEW DATA";
+
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    z-index: 4;
+
+    padding: 6px 8px;
+
+    background:
+        rgba(7, 12, 17, 0.78);
+
+    border: 1px solid
+        rgba(150, 170, 185, 0.18);
+
+    color: #8293a0;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 1.8px;
+
+    opacity: 0;
+
+    transform: translateY(-5px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.aircraft-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #3b4d5b;
+
+    box-shadow:
+        0 18px 45px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+.aircraft-card:hover::before {
+
+    opacity: 1;
+
+    transform:
+        translateX(100%);
+}
+
+
+.aircraft-card:hover::after {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   AIRCRAFT IMAGE
+========================================================= */
+
+.aircraft-card-image {
+    overflow: hidden;
+}
+
+
+.aircraft-card-image img {
+
+    transition:
+        transform 0.7s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+        filter 0.4s ease;
+}
+
+
+.aircraft-card:hover
+.aircraft-card-image img {
+
+    transform: scale(1.045);
+
+    filter:
+        brightness(1.06)
+        contrast(1.03);
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.aircraft-card-title {
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.aircraft-card:hover
+.aircraft-card-title {
+
+    color: #ffffff;
+
+    transform:
+        translateX(3px);
+}
+
+
+.aircraft-card-manufacturer {
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.aircraft-card:hover
+.aircraft-card-manufacturer {
+
+    color: #9aabb8;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.aircraft-card-arrow {
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.aircraft-card:hover
+.aircraft-card-arrow {
+
+    transform:
+        translateX(6px);
+
+    color: #dce4e9;
+}
+
+
+/* =========================================================
+   DATA VALUES
+========================================================= */
+
+.aircraft-spec-value {
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.aircraft-card:hover
+.aircraft-spec-value {
+
+    color: #dce4e9;
+}

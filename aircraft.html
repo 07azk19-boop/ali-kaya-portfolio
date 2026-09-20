@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Uçakları Keşfet | Ali Kaya</title>
+
+    <link rel="stylesheet" href="aircraft.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="aircraft-header">
+
+        <div class="aircraft-container header-inner">
+
+            <a href="index.html" class="aircraft-logo">
+                AK
+            </a>
+
+            <div class="aircraft-header-title">
+                UÇAKLARI KEŞFET
+            </div>
+
+            <a href="index.html" class="aircraft-back">
+                ANA SAYFA
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="aircraft-hero">
+
+            <div class="aircraft-container">
+
+                <div class="hero-content">
+
+        
+                    <h1>
+                        Uçakları
+                        <span>Keşfet</span>
+                    </h1>
+
+                    <p>
+                        Airbus ve Boeing'in ticari uçak serilerini; menzil, seyir hızı, motor, 
+                        kapasite ve diğer temel teknik özellikleriyle birlikte kendi hazırladığım bu arşivde bir araya getirdim. 
+                        Aşağıdaki bilgi kartlarından uçak modellerini inceleyebilir ve her birinin teknik detaylarına ulaşabilirsiniz.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPLORER
+        ====================================================== -->
+
+        <section class="aircraft-explorer">
+
+            <div class="aircraft-container">
+
+
+                <!-- SEARCH -->
+
+                <div class="aircraft-search">
+
+                    <div class="search-icon">
+                        ⌕
+                    </div>
+
+                    <input
+                        type="text"
+                        id="aircraftSearch"
+                        placeholder="Uçak ara..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- MANUFACTURER FILTER -->
+
+                <div class="filter-section">
+
+                    <span class="filter-title">
+                        ÜRETİCİ
+                    </span>
+
+                    <div class="aircraft-filters">
+
+                        <button
+                            class="aircraft-filter active"
+                            data-filter="all"
+                        >
+                            TÜMÜ
+                        </button>
+
+                        <button
+                            class="aircraft-filter"
+                            data-filter="Airbus"
+                        >
+                            AIRBUS
+                        </button>
+
+                        <button
+                            class="aircraft-filter"
+                            data-filter="Boeing"
+                        >
+                            BOEING
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TYPE FILTER -->
+
+                <div class="filter-section">
+
+                    <span class="filter-title">
+                        GÖVDE TİPİ
+                    </span>
+
+                    <div class="aircraft-filters">
+
+                        <button
+                            class="aircraft-type-filter active"
+                            data-type="all"
+                        >
+                            TÜMÜ
+                        </button>
+
+                        <button
+                            class="aircraft-type-filter"
+                            data-type="Dar Gövde"
+                        >
+                            DAR GÖVDE
+                        </button>
+
+                        <button
+                            class="aircraft-type-filter"
+                            data-type="Geniş Gövde"
+                        >
+                            GENİŞ GÖVDE
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULT HEADER -->
+
+                <div class="aircraft-result-header">
+
+                    <div>
+
+                        <span class="result-kicker">
+                            UÇAKLAR
+                        </span>
+
+                        <h2>
+                            Ticari Uçaklar
+                        </h2>
+
+                    </div>
+
+                    <span
+                        id="aircraftCount"
+                        class="aircraft-count"
+                    >
+                        0 UÇAK
+                    </span>
+
+                </div>
+
+
+                <!-- AIRCRAFT GRID -->
+
+                <div
+                    id="aircraftGrid"
+                    class="aircraft-grid"
+                >
+
+                    <!--
+                        Uçak kartları JavaScript
+                        tarafından oluşturulacak.
+                    -->
+
+                </div>
+
+
+                <!-- EMPTY RESULT -->
+
+                <div
+                    id="aircraftEmpty"
+                    class="aircraft-empty"
+                >
+
+                    <span>
+                        UÇAK BULUNAMADI
+                    </span>
+
+                    <p>
+                        Arama veya filtre seçeneklerini
+                        değiştirmeyi deneyin.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- =====================================================
+     AIRCRAFT DETAIL MODAL
+====================================================== -->
+
+<div id="aircraftModal" class="aircraft-modal">
+
+    <div class="aircraft-modal-backdrop"></div>
+
+    <div class="aircraft-modal-inner">
+
+        <button
+            id="aircraftModalClose"
+            class="aircraft-modal-close"
+            aria-label="Kapat"
+        >
+            ×
+        </button>
+
+
+        <div id="aircraftModalContent">
+
+            <!-- JS BURAYI DOLDURACAK -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="aircraft-footer">
+
+        <div class="aircraft-container footer-inner">
+
+            <span>
+                © 2026 Ali Kaya
+            </span>
+
+            <span>
+                AVIATION ARCHIVE
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="aircraft.js"></script>
+
+</body>
+
+</html>

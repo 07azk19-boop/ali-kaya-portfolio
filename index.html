@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ali Kaya | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+
+<body>
+
+<header>
+    <div class="container">
+
+        <div class="logo">AK</div>
+
+        <nav>
+
+            <a href="#about" id="navAbout">About</a>
+            <a href="#experience" id="navExperience">Experience</a>
+            <a href="#projects" id="navProjects">Projects</a>
+            <a href="#" id="navAviation">Aviation</a>
+            <a href="#" id="navContact">Contact</a>
+
+            <div class="language">
+
+                <button id="enBtn">EN</button>
+                <span>/</span>
+
+                <button id="trBtn">TR</button>
+                <span>/</span>
+
+                <button id="deBtn">DE</button>
+                <span>/</span>
+
+                <button id="frBtn">FR</button>
+
+            </div>
+
+        </nav>
+        <button
+    class="mobile-nav-trigger"
+    id="mobileNavTrigger"
+    aria-label="Menüyü aç"
+    aria-expanded="false"
+>
+    <span class="nav-trigger-icon">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </span>
+
+    <span class="nav-trigger-label">MENU</span>
+</button>
+
+<div class="mobile-nav-panel" id="mobileNavPanel">
+
+    <div class="mobile-nav-label" data-i18n="navLabel">
+        NAVIGATION
+    </div>
+
+    <a href="#about" data-mobile-nav>
+        <span>01</span>
+        <span data-i18n="navAbout">Hakkımda</span>
+    </a>
+
+    <a href="#experience" data-mobile-nav>
+        <span>02</span>
+        <span data-i18n="navExperience">Deneyim</span>
+    </a>
+
+    <a href="#projects" data-mobile-nav>
+        <span>03</span>
+        <span data-i18n="navProjects">Projeler</span>
+    </a>
+
+    <a href="#" id="mobileNavAviation">
+        <span>04</span>
+        <span data-i18n="navAviation">Havacılık</span>
+    </a>
+
+    <a href="#" data-mobile-nav>
+        <span>05</span>
+        <span data-i18n="navContact">İletişim</span>
+    </a>
+
+</div>
+
+    </div>
+</header>
+
+
+
+<main>
+
+
+    <!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <button class="aviation-float" id="aviationFloat">
+        <span class="aviation-plane">✈</span>
+        <span>ARŞİVE UÇ</span>
+    </button>
+
+    <a
+        href="aircraft.html"
+        class="aircraft-explore-float"
+    >
+        <img
+            src="images/engine.png"
+            alt=""
+        >
+        <span>UÇAKLARI KEŞFET</span>
+        <b>→</b>
+    </a>
+
+    <div class="container">
+
+        <h1>Ali Kaya</h1>
+
+        <h2 id="heroTitle">
+            Aviation Electrical & Electronics Student
+        </h2>
+
+        <p class="intro" id="heroIntro">
+            Havacılık Elektrik ve Elektroniği alanında kendimi geliştiren bir öğrenciyim. Uçak bakım operasyonları, hava aracı sistemleri ve havacılık teknolojilerine olan ilgimi saha deneyimleri, teknik çizim ve tasarım çalışmalarıyla destekliyorum. Bunun yanında web teknolojileri ve dijital projeler üzerine çalışmalar geliştirerek teknik ve yaratıcı yönümü farklı alanlarda geliştirmeye devam ediyorum.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://www.linkedin.com/in/ali-kaya-09a331277/"
+                target="_blank"
+                class="btn secondary"
+                id="linkedinBtn"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=07azk19@gmail.com"
+                target="_blank"
+                class="btn secondary"
+                id="contactBtn"
+            >
+                İletişime Geç
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-heading">
+
+                    <div class="section-label" id="aboutLabel">
+                        About Me
+                    </div>
+
+                    <h2 id="aboutTitle">
+                        Merhaba,<br>
+                        ben <span>Ali.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <p id="aboutText1">
+                        Merhaba, ben Ali. Antalya'da yaşıyorum. Lise eğitimimi Antalya'daki
+                        Metin Nuran Çakallıklı Anadolu Lisesi'nin Almanca programında tamamladım.
+                        Ardından Erciyes Üniversitesi'nde dört yıllık Havacılık Elektrik ve
+                        Elektroniği lisans bölümünde eğitim aldım. Üniversite hayatım boyunca
+                        bölümümün yanı sıra havacılık alanındaki çalışmaların içinde aktif olarak
+                        yer aldım ve üniversitenin köklü öğrenci kulüplerinden Havacılık Kulübü'nde
+                        iki dönem başkanlık yaptım.
+                    </p>
+
+                    <p id="aboutText2">
+                        Havacılık benim için yalnızca eğitim aldığım bir alan değil; uçak bakım
+                        operasyonları, hava aracı sistemleri ve teknik uygulamalar üzerinden
+                        kendimi geliştirmeye devam ettiğim bir alan. Eğitim sürecimde edindiğim
+                        teorik bilgileri saha deneyimleriyle birleştirmeye, farklı çalışma
+                        ortamlarında sorumluluk almaya ve öğrendiklerimi gerçek uygulamalarla
+                        pekiştirmeye önem verdim.
+                    </p>
+
+                    <p id="aboutText3">
+                        Havacılığın yanında yazılım ve teknolojiyle de ilgileniyorum. Web tabanlı
+                        projeler geliştiriyor, farklı teknolojiler öğreniyor ve teknik becerilerimi
+                        havacılık alanındaki ilgimle bir araya getirmeye çalışıyorum. Bu portfolio
+                        sitesi de bu iki ilgi alanımı bir araya getirdiğim çalışmalardan biri.
+                    </p>
+
+                    <p id="aboutText4">
+                        Kendimi; teknik açıdan sürekli geliştiren, farklı deneyimlerden öğrenen
+                        ve havacılık sektöründe edindiği bilgileri gerçek saha deneyimleriyle
+                        güçlendirmeyi hedefleyen biri olarak görüyorum.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
+
+    <section class="experience" id="experience">
+
+        <div class="container">
+
+            <div class="section-label" id="experienceLabel">
+                EXPERIENCE
+            </div>
+
+            <h2 class="experience-title" id="experienceTitle">
+                Professional Experience
+            </h2>
+
+            <div class="experience-list">
+
+
+                <!-- 01 — CRYSTAL TAT BEACH -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        01
+                    </div>
+
+                    <div class="experience-content">
+
+                        <h3 id="exp1Title">
+                            Barista / Barmen
+                        </h3>
+
+                        <h4 id="exp1Company">
+                            Crystal Tat Beach Golf Resort & Spa
+                        </h4>
+
+                        <span class="experience-location" id="exp1Location">
+                            Tourism & Hospitality · Antalya
+                        </span>
+
+                        <span class="experience-period" id="exp1Period">
+                            June 2021 — October 2021
+                        </span>
+
+                        <p id="exp1Text">
+                            Turizm sektöründe, Crystal Tat Beach Golf Resort & Spa'da
+                            barmen ve barista olarak görev aldım. Uluslararası ve farklı
+                            profillerden misafirlerle doğrudan iletişim kurarak hizmet
+                            sektörünün dinamik çalışma ortamında deneyim kazandım.
+                            Yoğun sezon ve vardiyalı çalışma düzeninde ekip çalışmasına
+                            uyum sağlayarak servis süreçlerinin etkin ve düzenli şekilde
+                            yürütülmesine katkıda bulundum. Bu deneyim, farklı insanlarla
+                            iletişim kurma, yoğun çalışma temposuna uyum sağlama ve
+                            sorumluluk alma becerilerimi geliştirdi.
+                        </p>
+
+                        <div class="experience-images">
+
+                            <img
+                                src="images/tat-beach-1.jpeg"
+                                alt="Crystal Tat Beach Golf Resort & Spa"
+                            >
+
+                            <img
+                                src="images/tat-beach-2.jpeg"
+                                alt="Crystal Tat Beach Golf Resort & Spa"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 02 — FUGO -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        02
+                    </div>
+
+                    <div class="experience-content">
+
+                        <h3 id="exp2Title">
+                            Yolcu Hizmetleri Memuru
+                        </h3>
+
+                        <h4 id="exp2Company">
+                            Fugo Ground Handling Services
+                        </h4>
+
+                        <span class="experience-location" id="exp2Location">
+                            Ground Handling · Antalya
+                        </span>
+
+                        <span class="experience-period" id="exp2Period">
+                            Nisan 2023 — Ekim 2023
+                            <br>
+                            Haziran 2024 — Ekim 2024
+                        </span>
+
+                        <p id="exp2Text">
+                            Fugo Ground Handling Services bünyesinde, Yolcu Hizmetleri
+                            Memurluğu (YHM) kapsamında görev aldım. Check-in, boarding,
+                            arrival ve transfer süreçlerinin yanı sıra uçuş ekiplerinin
+                            karşılanması, ekip transferlerinin gerçekleştirilmesi ve
+                            uçuş operasyonlarının sahadaki koordinasyonunda aktif rol
+                            üstlendim. Gece ve gündüz vardiyalarında, yoğun uçuş
+                            trafiğinin bulunduğu dinamik bir operasyon ortamında
+                            çalışarak operasyonel koordinasyon, zaman yönetimi ve
+                            ekip iletişimi alanlarında deneyim kazandım.
+                        </p>
+
+                        <div class="experience-images">
+
+                            <img
+                                src="images/fugo-1.jpeg"
+                                alt="Fugo Ground Handling Services"
+                            >
+
+                            <img
+                                src="images/fugo-2.jpeg"
+                                alt="Fugo Ground Handling Services"
+                            >
+
+                            <img
+                                src="images/fugo-3.jpeg"
+                                alt="Fugo Ground Handling Services"
+                            >
+
+                            <img
+                                src="images/fugo-4.jpeg"
+                                alt="Fugo Ground Handling Services"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 03 — DECATHLON -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        03
+                    </div>
+
+                    <div class="experience-content">
+
+                        <h3 id="exp3Title">
+                            Sports Leader
+                        </h3>
+
+                        <h4 id="exp3Company">
+                            Decathlon
+                        </h4>
+
+                        <span class="experience-location" id="exp3Location">
+                            Sports Retail & Customer Experience · Kayseri
+                        </span>
+
+                        <span class="experience-period" id="exp3Period">
+                            October 2025 — July 2026
+                        </span>
+
+                        <p id="exp3Text">
+                            Decathlon'da Spor Lideri olarak görev aldım. Profesyonel olarak
+                            ilgilendiğim kayak, yüzme ve bisiklet branşlarındaki bilgi ve
+                            deneyimlerimi müşterilerle paylaşarak ihtiyaçlarına ve kullanım
+                            amaçlarına uygun ekipman seçimlerinde danışmanlık sağladım.
+                            Rolüm yalnızca reyon ve müşteri süreçleriyle sınırlı kalmayarak,
+                            farklı ürün ve ekipman eğitimleri, uygulamalı workshoplar ve
+                            şirket içi gelişim programlarına aktif katılımı da kapsadı.
+                            Düzenli eğitimlerle ürün ve spor branşları hakkındaki bilgimi
+                            sürekli geliştirirken, mağaza içerisinde gerçekleştirilen
+                            kolektif spor aktiviteleri ve ekip çalışmalarında da aktif rol
+                            aldım. Bu süreçte müşteri iletişimi, ekip çalışması, organizasyon
+                            ve farklı ihtiyaçlara hızlı şekilde çözüm üretme konularında
+                            deneyim kazandım.
+                        </p>
+
+                        <div class="experience-images">
+
+                            <img
+                                src="images/decathlon-1.jpeg"
+                                alt="Decathlon"
+                            >
+
+                            <img
+                                src="images/decathlon-2.jpeg"
+                                alt="Decathlon"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 04 — TURKISH TECHNIC -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        04
+                    </div>
+
+                    <div class="experience-content">
+
+                        <h3 id="exp4Title">
+                            Uçak Bakım Teknisyeni - Stajyer
+                        </h3>
+
+                        <h4 id="exp4Company">
+                            Turkish Technic
+                        </h4>
+
+                        <span class="experience-location" id="exp4Location">
+                            Aircraft Maintenance · Istanbul Atatürk Airport
+                        </span>
+
+                        <span class="experience-period" id="exp4Period">
+                            September 2026 — Present
+                        </span>
+
+                        <p id="exp4Text">
+                            Turkish Technic bünyesinde Hangarım Kampüs OJT programı kapsamında
+                            uçak bakım operasyonlarını yakından tanıyor ve havacılık eğitimim
+                            boyunca edindiğim teorik bilgileri gerçek bakım ortamında uygulama
+                            fırsatı buluyorum. Hangar operasyonları, bakım süreçleri, teknik
+                            dokümantasyon ve hava aracı sistemleri üzerine gözlem ve uygulama
+                            deneyimi kazanarak bakım organizasyonunun işleyişini sahada
+                            öğreniyorum. Farklı bakım faaliyetlerini ve teknik çalışma
+                            süreçlerini yakından takip ederken, mesleki bilgi ve becerilerimi
+                            geliştirmeye ve havacılık bakım sektöründeki kariyerime yönelik
+                            güçlü bir temel oluşturmaya devam ediyorum.
+                        </p>
+
+                        <div class="experience-images">
+
+                            <img
+                                src="images/ojt-1.jpeg"
+                                alt="Turkish Technic Hangarım Kampüs"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section class="projects" id="projects">
+
+        <div class="container">
+
+            <div class="section-label" id="projectsLabel">
+                PROJECTS
+            </div>
+
+            <h2 class="projects-title" id="projectsTitle">
+                Selected Projects
+            </h2>
+
+            <div class="projects-list">
+
+                <!-- 01 — AIRCRAFT HANGAR PROJECT -->
+
+                <div class="project-item">
+
+                    <div class="project-date">
+                        01
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3 id="project1Title">
+                            Uçak Hangarı Projesi
+                        </h3>
+
+                        <h4 id="project1Company">
+                            Erciyes Üniversitesi
+                        </h4>
+
+                        <span class="project-location" id="project1Location">
+                            Uçak Bakımları & Hangar Planlama 
+                        </span>
+
+                        <p id="project1Text">
+                            Üniversite eğitimim kapsamında gerçekleştirdiğim bu projede,
+                            hava araçlarının bakım ve muhafaza süreçlerine yönelik bir
+                            hangar konsepti üzerinde çalıştım. Projenin tasarım ve
+                            yerleşim çalışmalarını SketchUp kullanarak hazırladım;
+                            hangar içerisinde farklı hava araçları, bakım ekipmanları,
+                            motorlar ve çalışma alanlarının yerleşimini planladım.
+                            Çalışma sürecinde teknik gereksinimleri, kullanım alanlarını
+                            ve operasyonel düzeni birlikte değerlendirerek üç boyutlu
+                            bir hangar modeli oluşturdum.
+                        </p>
+
+                        <div class="project-images">
+
+                            <img
+                                src="images/hangar-project-1.jpeg"
+                                alt="Aircraft Hangar Design"
+                            >
+
+                            <img
+                                src="images/hangar-project-2.jpeg"
+                                alt="Aircraft Hangar Design"
+                            >
+
+                            <img
+                                src="images/hangar-project-3.jpeg"
+                                alt="Aircraft Hangar Design"
+                            >
+
+                            <img
+                                src="images/hangar-project-4.jpeg"
+                                alt="Aircraft Hangar Design"
+                            >
+                            <img
+                                src="images/hangar-project-sketchup.jpeg"
+                                alt="Aircraft Hangar Design"
+                            >   
+                            <img
+                                src="images/hangar-project-5.jpeg"
+                                alt="Aircraft Hangar Design"
+                            >
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+<!-- 02 — MOTIVO -->
+
+<div class="project-item">
+
+    <div class="project-date">
+        02
+    </div>
+
+    <div class="project-content">
+
+        <h3>Motivo - Takım Performans Platformu</h3>
+
+        <h4>Decathlon Kayseripark</h4>
+
+        <span class="project-location">
+            React & Firebase · Ekip Takdir Platformu
+        </span>
+
+        <p>
+            Decathlon Kayseripark için geliştirdiğim Motivo, ekip içi takdir ve
+            performans süreçlerini dijitalleştiren React ve Firebase tabanlı bir
+            web uygulamasıdır. Kullanıcıların takım, isim ve PIN bilgileriyle
+            sisteme giriş yaparak ekip arkadaşlarına teşekkür ve takdir mesajları
+            göndermesine olanak sağlar. Gönderilen takdirler sistem tarafından
+            puanlanarak aylık lider tablosuna yansıtılır. Projede günlük ve
+            haftalık kullanım limitleri, aynı kişiye yönelik gönderim sınırları
+            ve yönetici paneli gibi özellikler geliştirilmiştir. Admin paneli
+            üzerinden aylık performans sonuçları görüntülenebilir ve rapor olarak
+            dışa aktarılabilir.
+        </p>
+
+        <div class="project-images motivo-images">
+
+            <img
+                src="images/motivo-1.jpeg"
+                alt="Motivo giriş ekranı"
+            >
+
+            <img
+                src="images/motivo-2.jpeg"
+                alt="Motivo takım ve kişi seçimi"
+            >
+
+            <img
+                src="images/motivo-3.jpeg"
+                alt="Motivo teşekkür gönderme ekranı"
+            >
+
+            <img
+                src="images/motivo-4.jpeg"
+                alt="Motivo ana ekranı"
+            >
+
+            <img
+                src="images/motivo-5.jpeg"
+                alt="Motivo aylık lider tablosu"
+            >
+
+            <img
+                src="images/motivo-6.jpeg"
+                alt="Motivo admin paneli"
+            >
+
+        </div>
+
+    </div>
+
+</div>
+<!-- 03 — SD TEKNOLOJİ -->
+
+<div class="project-item">
+
+    <div class="project-date">
+        03
+    </div>
+
+    <div class="project-content">
+
+        <h3>
+            SD Teknoloji — Kurumsal Website
+        </h3>
+
+        <h4>
+            Bosch Yetkili Satıcısı
+        </h4>
+
+        <span class="project-location">
+            Website Geliştirme ve Dijital Varlık
+        </span>
+
+        <p>
+            Antalya'da faaliyet gösteren Bosch yetkili satış noktası
+            SD Teknoloji için kurumsal web sitesini tasarladım ve geliştirdim.
+            Proje kapsamında markanın dijital kimliğini yansıtan modern ve
+            kullanıcı odaklı bir arayüz oluşturarak ürün kategorileri,
+            marka içerikleri, mağaza bilgileri, kampanyalar, bilgi merkezi,
+            iletişim ve konum bilgilerini web ortamına taşıdım.
+            HTML, CSS ve JavaScript kullanılarak responsive bir yapı
+            geliştirildi.
+        </p>
+        <a
+            href="https://sdteknolojiantalya.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            Web Sitesini İncele →
+        </a>
+
+        <div class="project-images">
+
+            <img
+                src="images/sd-teknoloji-1.jpeg"
+                alt="SD Teknoloji ana sayfa"
+            >
+
+            <img
+                src="images/sd-teknoloji-2.jpeg"
+                alt="SD Teknoloji kurumsal sayfa"
+            >
+
+            <img
+                src="images/sd-teknoloji-3.jpeg"
+                alt="SD Teknoloji bilgi merkezi"
+            >
+            <img
+                src="images/sd-teknoloji-4.jpeg"
+                alt="SD Teknoloji bilgi merkezi"
+            >
+
+        </div>
+
+        
+
+    </div>
+
+</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     CURSOR PLANE
+========================= -->
+
+<div id="planeTrail"></div>
+
+<img
+    src="images/plane.svg"
+    class="cursor-plane"
+    id="cursorPlane"
+>
+<!-- =========================
+     AVIATION FLIGHT DISPLAY
+========================= -->
+
+<div id="aviationOverlay">
+
+    <div class="aviation-panel">
+
+        <button id="aviationClose" class="aviation-close">
+            ×
+        </button>
+
+        <div class="aviation-top">
+
+            <div>
+                <span class="aviation-label">FLIGHT DISPLAY</span>
+                <strong>AK-01</strong>
+            </div>
+
+            <div class="flight-status">
+                <span id="flightPhase">CRUISE</span>
+            </div>
+
+        </div>
+
+
+        <!-- FLIGHT DATA -->
+
+        <div class="flight-data">
+
+            <div class="flight-data-item">
+                <span>ALT</span>
+                <strong id="altitudeValue">35000</strong>
+                <small>FT</small>
+            </div>
+
+            <div class="flight-data-item">
+                <span>SPD</span>
+                <strong id="speedValue">450</strong>
+                <small>KT</small>
+            </div>
+
+            <div class="flight-data-item">
+                <span>VS</span>
+                <strong id="verticalSpeedValue">+0</strong>
+                <small>FPM</small>
+            </div>
+
+            <div class="flight-data-item">
+                <span>HDG</span>
+                <strong id="headingValue">247</strong>
+                <small>°</small>
+            </div>
+
+        </div>
+
+
+        <!-- MAIN DISPLAY -->
+
+        <div class="flight-display">
+
+            <div class="sky"></div>
+            <div class="ground"></div>
+
+            <!-- HORIZON -->
+
+            <div class="horizon-line"></div>
+
+
+            <!-- GRID -->
+
+            <div class="flight-grid">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <!-- FLIGHT PATH -->
+
+            <svg
+                class="flight-path"
+                viewBox="0 0 1000 500"
+                preserveAspectRatio="none"
+            >
+
+                <path
+                    d="M40 100
+                       C180 90 250 120 350 180
+                       C470 250 550 300 650 350
+                       C760 405 850 430 960 450"
+                />
+
+            </svg>
+
+
+            <!-- AIRCRAFT -->
+
+            <!-- AIRCRAFT -->
+
+<div id="animatedAircraft">
+
+    <img
+        src="images/aircraft.png"
+        alt="Aircraft"
+    >
+
+</div>
+
+
+            <!-- DESTINATION -->
+
+            <div id="destinationStation">
+
+                <div class="station-line"></div>
+
+                <div class="station-dot"></div>
+
+                <div class="station-info">
+
+                    <strong>ERCIYES UNIVERSITY</strong>
+
+                    <span>DESTINATION STATION</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FLIGHT GUIDANCE -->
+
+            <div class="flight-guidance">
+
+                <span>LOC</span>
+                <strong id="locStatus">ARM</strong>
+
+                <span>GS</span>
+                <strong id="gsStatus">ARM</strong>
+
+                <span>AP</span>
+                <strong id="apStatus">ARM</strong>
+
+            </div>
+
+
+            <!-- AIRCRAFT STATUS -->
+
+            <div class="aircraft-status">
+
+                <div>
+                    <span>FLAPS</span>
+                    <strong id="flapStatus">UP</strong>
+                </div>
+
+                <div>
+                    <span>GEAR</span>
+                    <strong id="gearStatus">UP</strong>
+                </div>
+
+                <div>
+                    <span>AUTO</span>
+                    <strong id="autoStatus">CRZ</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM STATUS -->
+
+        <div class="aviation-bottom">
+
+            <span>
+                NAV • <strong id="navStatus">ACTIVE</strong>
+            </span>
+
+            <span>
+                SYS • <strong>NORMAL</strong>
+            </span>
+
+            <span>
+                DEST • <strong>ERCİYES</strong>
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+<footer class="site-footer">
+    <div class="container footer-inner">
+
+        <div class="footer-left">
+            
+            <span>Ali Kaya</span>
+        </div>
+
+        <div class="footer-center">
+            Avıatıon & Technology
+        </div>
+
+        <div class="footer-right">
+            © 2026
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>
